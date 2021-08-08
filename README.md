@@ -1,2 +1,2 @@
 # JavaPOO
-Material y ejercicios del curso introductorio de programación orientada a objetos con java
+Material y ejercicios del curso introductorio de programación orientada a objetos con Java.
