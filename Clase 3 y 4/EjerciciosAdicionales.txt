@@ -1,0 +1,34 @@
+1) A - Definir una clase para representar balanzas comerciales (para ser utilizadas en verdulerías, carnicerías, etc). Una balanza comercial sólo mantiene el monto y la cantidad de items correspondientes a la compra actual (es decir, no almacena los ítems de la compra). La balanza debe responder a los siguientes mensajes:
+▪ iniciarCompra(): inicializa el monto y cantidad de ítems de la compra actual.
+▪ registrarProducto(pesoEnKg, precioPorKg): recibe el peso en kg del ítem comprado y su precio por kg, debiendo realizar las actualizaciones en el estado de la balanza.
+▪ devolverMontoAPagar(): retorna el monto de la compra actual.
+▪ devolverResumenDeCompra(): retorna un String del siguiente estilo “Total a pagar X por la compra de Y productos” , donde X es el monto e Y es la cantidad de ítems de la compra.
+B - Genere un programa principal que cree una balanza e inicie una compra. Lea información desde teclado correspondiente a los ítems comprados (peso en kg y precio por kg) hasta que se ingresa uno con peso 0. Registre cada producto en la balanza. Al finalizar, informe el resumen de la compra.
+
+2)A- Generar una clase para representar círculos. Los círculos se caracterizan por su radio (double),
+el color de relleno (String) y el color de línea (String). El círculo debe saber:
+▪ Devolver/modificar el valor de cada uno de sus atributos (get# y set#)
+▪ Calcular el área y devolverla. (método calcularArea)
+▪ Calcular el perímetro y devolverlo. (método calcularPerimetro)
+NOTA: la constante PI es Math.PI
+B- Realizar un programa principal que instancie un círculo, le cargue información leída de teclado e informe en consola el perímetro y el área.
+
+3-A- Definir una clase para representar flotas de micros. Una flota se caracteriza por conocer a los micros que la componen (a lo sumo 15). Defina un constructor para crear una flota vacía (sin micros).
+Implemente métodos para:
+i. devolver si la flota está completa (es decir, si tiene 15 micros o no).
+ii. agregar a la flota un micro recibido como parámetro.
+iii. eliminar de la flota el micro con patente igual a una recibida como parámetro, y retornar si la operación fue exitosa.
+iv. buscar en la flota un micro con patente igual a una recibida como parámetro y retornarlo (en caso de no existir dicho micro, retornar null).
+v. buscar en la flota un micro con destino igual a uno recibido como parámetro y retornarlo (en caso de no existir dicho micro, retornar null).
+
+B- Genere un programa que cree una flota vacía. Cargue micros (sin pasajeros) a la flota con información leída desde teclado (hasta que se ingresa la patente “ZZZ000” o hasta completar la flota). Luego lea una patente y elimine de la flota el micro con esa patente; busque el micro con dicha patente para comprobar que ya no está en la flota. Para finalizar, lea un destino e informe la patente del micro que va a dicho destino.
+
+4-A) Definir una clase para representar un auto. Cada auto tiene una patente y un dueño.
+Implemente la clase, con los constructores para poder instanciar un objeto, atributos,  y métodos para obtener/modificar el valor de los mismos.
+4-B) Definir una clase para representar un Estacionamiento. El estacionamiento conoce su nombre, dirección, hora de apertura y hora de cierre, y almacena para cada número de piso (1..N) y número de plaza (1..M), el auto que ocupa dicho lugar.
+a) Implemente un constructor que reciba nombre y dirección, e inicie el estacionamiento con hora de apertura “8:00”, hora de cierre “21:00”, y para 5 pisos y 10 plazas por piso. El estacionamiento inicialmente no tiene autos.
+b) Implemente un segundo constructor que reciba nombre, dirección, hora de apertura, hora de cierre, el número de pisos (N) y el número de plazas por piso (M) e inicie el estacionamiento con los datos recibidos, y sin autos.
+c) Implemente métodos para:
+- Dado un auto A, un número de piso X y un número de plaza Y, registrar al auto en el estacionamiento en el lugar X,Y. Suponga que X, Y son válidos y que el lugar está desocupado.
+- Dada una patente, obtener un string que contenga el número de piso y plaza donde está dicho auto. En caso de no encontrarse, retornar el mensaje “Auto Inexistente”.
+- Obtener un String con la representación del estacionamiento. Ejemplo: “Piso 1 Plaza 1: libre Piso 1 Plaza 2: representación del auto ... Piso 2 Plaza 1: libre ... etc”

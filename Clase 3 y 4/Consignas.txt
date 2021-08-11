@@ -1,0 +1,108 @@
+1) Queremos representar la información de empleados de un club: jugadores y
+entrenadores.
+▪ Cualquier empleado se caracteriza por su nombre y sueldo básico.
+▪ Los jugadores son empleados que se caracterizan por el número de partidos jugados y el número de goles anotados.
+▪ Los entrenadores son empleados que se caracterizan por la cantidad de campeonatos
+ganados.
+A- Implemente la jerarquía de clases, con los atributos de cada clase y métodos para obtener/modificar el valor de los mismos.
+B- Implemente constructores para los jugadores y entrenadores, que reciban toda la información necesaria para inicializar el objeto en cuestión.
+C- Cualquier empleado (jugador / entrenador) debe saber responder al mensaje
+calcularSueldoACobrar (que calcula y devuelve el sueldo a cobrar) pero de manera diferente:
+▪ Para los jugadores: el sueldo a cobrar es el sueldo básico y si el promedio de goles por partido es superior a 0,5 se adiciona un plus de otro sueldo básico.
+▪ Para los entrenadores: el sueldo a cobrar es el sueldo básico al cual se le adiciona un plus por campeonatos ganados (5000$ si ha ganado entre 1 y 4 campeonatos; $30.000 si ha ganado entre 5 y 10 campeonatos; 50.000$ si ha ganado más de 10 campeonatos).
+D- Cualquier empleado debe responder al mensaje toString, que devuelve un String que lo representa. La representación de cualquier empleado está compuesta por su nombre y sueldo a cobrar.
+E- Escriba un programa principal que instancie un jugador y un entrenador con datos leídos desde teclado. Pruebe el correcto funcionamiento de cada método implementado.
+
+2)A- Modele e implemente las clases para el siguiente problema. Una garita de seguridad quiere identificar los distintos tipos de personas que entran a un barrio cerrado.
+Al barrio pueden entrar personas, que se caracterizan por su nombre, DNI y edad. Además pueden entrar trabajadores, estos son personas que se caracterizan además por la tarea que realizan en el predio.
+Implemente constructores, getters y setters para las clases. Además tanto las personas como los trabajadores deben responder al mensaje toString(). A continuación se ejemplifica la representación a retornar por cada uno:
+- Personas: “Mi nombre es Mauro, mi DNI es 11203737 y tengo 70 años”
+- Trabajadores: “Mi nombre es Mauro, mi DNI es 11203737 y tengo 70 años. Soy Corta césped.”
+B- Genere un programa que instancie una persona y un trabajador con datos leídos de teclado y muestre la representación de cada uno en consola.
+
+3) Dada la jerarquía, indicar que imprime el programa sin correrlo.
+
+4) Queremos representar dos tipos de urnas electrónicas: electorales (usada en elecciones donde se presentan varias listas) y de referéndum (usada para saber si la población está a favor/en contra de la aprobación de una ley).
+● Cualquier urna se caracteriza por su número de urna y un contador de votos en blanco.
+● Una urna electoral es una urna que se caracteriza además por la cantidad de listas existentes y por mantener un contador de votos para cada lista (son “L” listas, y están numeradas desde 0).
+● Una urna de referéndum es una urna que se caracteriza además por mantener un contador de votos a favor y un contador de votos en contra.
+A) Realice el modelo de clases. Implemente las clases con sus atributos y métodos para obtener/modificar el valor de aquellos que considere adecuado.
+B) Implemente constructores. El constructor de las urnas electorales recibe dos números “U” y “L” e inicia el número de urna a “U”, la cant. de listas a “L”, y todos los contadores de votos a 0. El constructor de las urnas de referéndum recibe un nro. “U” e inicia el número de urna a “U” y todos sus contadores de votos a 0.
+C) Incorpore los métodos listados a continuación:
+i. Cualquier urna debe saber responder al mensaje votarEnBlanco que incrementa en 1 el contador de votos en blanco.
+ii. Las urnas electorales deben responder a los mensajes:
+● validarNumeroDeLista: recibe un nro. “N” y devuelve un boolean indicando si N es un nro. de lista válido.
+● votarPorLista: recibe un nro. de lista válido “I” y debe incrementar en 1 el contador de votos de esa lista.
+● devolverVotosPorLista: recibe un nro de lista válido “I” y devuelve la cantidad de votos para esa lista.
+iii. Las urnas de referéndum deben responder a los mensajes:
+● votarAFavor: incrementa en 1 el contador de votos a favor.
+● votarEnContra: incrementa en 1 el contador de votos en contra.
+iv. Ambos tipos de urnas deben saber responder al mensaje calcularGanador pero de manera diferente:
+● Para las urnas electorales debe devolver el nro. de la lista ganadora. En caso de empate entre 2 o más listas, se elegirá una como ganadora – indistintamente.
+● Para las urnas de referéndum debe devolver un nro. -1 si hubo empate, 0 si ganó la opción En Contra, 1 si gano la opción A Favor.
+v. Ambos tipos de urnas deben saber responder al mensaje calcularTotalVotos pero de manera diferente:
+● Para las urnas electorales debe devolver la suma de votos en blanco y votos a favor de cada lista.
+● Para las urnas de referéndum debe devolver la suma de votos en blanco, a favor y en contra.
+II) Realice un programa que instancie una urna electoral para la mesa “203” con 5 listas y una urna de referéndum para la mesa “203”. Luego, lea DNIs de personas que llegan a votar a la mesa, hasta que se ingresa el DNI 0. Cada persona vota en ambas urnas de la siguiente manera. Para la urna electoral, la persona ingresa un nro. “N”: si “N” corresponde a una lista válida se debe votar por la lista “N” y en caso contrario se debe votar en blanco. Para la urna de referéndum, la persona ingresa un número “M”: si “M” es positivo se debe votar a favor, si es negativo se debe votar en contra, y si es 0 debe votar en blanco. Al finalizar la votación, calcular la opción ganadora en ambas urnas y mostrar el resultado en consola. Además mostrar para cada urna el porcentaje de votos que obtuvo la opción ganadora respecto al total de votos.
+
+5)A- Definir una clase para representar micros. Un micro conoce su patente, destino, hora
+salida, el estado de sus 20 asientos (es decir si está o no ocupado) y la cantidad de asientos
+ocupados al momento. Lea detenidamente a) y b) y luego implemente.
+a) Implemente un constructor que permita iniciar el micro con una patente, un destino y
+una hora de salida (recibidas por parámetro) y sin pasajeros.
+b) Implemente métodos para:
+i. devolver/modificar patente, destino y hora de salida
+ii. devolver la cantidad de asientos ocupados
+iii. devolver si el micro está lleno
+iv. validar un número de asiento recibido como parámetro (es decir, devolver si está
+en rango o no)
+v. devolver el estado de un nro. de asiento válido recibido como parámetro
+vi. ocupar un nro. de asiento válido recibido como parámetro
+vii. liberar un nro. de asiento válido recibido como parámetro
+viii. devolver el nro. del primer asiento libre
+B- Realice un programa que cree un micro con patente “ABC123”, destino “Mar del Plata” y
+hora de salida 5:00. Cargue pasajeros al micro de la siguiente manera. Leer nros. de
+asientos desde teclado que corresponden a pedidos de personas. La lectura finaliza cuando
+se ingresa el nro. de asiento -1 o cuando se llenó el micro. Para cada nro. de asiento leído
+debe: validar el nro; en caso que esté libre, ocuparlo e informar a la persona el éxito de la
+operación; en caso que esté ocupado informar a la persona la situación y mostrar el nro.
+del primer asiento libre. Al finalizar, informe la cantidad de asientos ocupados del micro.
+
+6)Una universidad desea un sistema que le permita administrar a sus proyectos, investigadores y
+subsidios. Un proyecto tiene un nombre, un código, un director y los investigadores
+que participan en el proyecto (hasta 50 como máximo). De cada investigador se desea
+saber su nombre, apellido, categoría (1 a 5) y su especialidad. Cualquier investigador
+puede pedir hasta un máximo de 5 subsidios. De cada subsidio se desea saber el
+monto pedido, el motivo y se fue otorgado o no.
+a. Implemente el modelo de clases teniendo en cuenta:
+i. Un proyecto solo debería poder construirse con el nombre y el código
+ii. Un investigador solo debería poder construirse con nombre y apellido,
+categoría y especialidad
+iii. Un subsidio solo debería poder construirse con el monto solicitado y el
+motivo. Un subsidio siempre se crea en estado no-otorgado.
+b. Implemente métodos (en las clases donde corresponda) que permitan:
+i. void agregarInvestigador(unInvestigador);
+// agrega un investigador a un proyecto.
+ii. void agregarSubsidio(unSubsidio);
+// agrega un subsidio a un investigador.
+iii. double dineroTotalOtorgado();
+// devuelve la cantidad de dinero de todos los subsidios otorgados a
+// todos los investigadores de un proyecto.
+iv. int cantidadDeSubsidios(String nombre_y_apellido);
+// devuelve la cantidad de subsidios (otorgados o no) solicitados por el
+// investigador llamado "nombre_y_apellido".
+v. void otorgarTodos(String nombre_y_apellido);
+// otorga todos los subsidios pendientes que tiene el investigador
+// llamado “nombre_y_apellido”
+vi. String toString();
+// Devuelve un string que tiene el nombre del proyecto, su código, el
+// nombre y apellido del director, el total de dinero otorgado y el
+// nombre y apellido de cada investigador. Para cada investigador,
+// además, se debe agregar la categoría del mismo y el dinero de sus
+// subsidios otorgados.
+
+NOTA: puede crear todos los métodos auxiliares que considere necesario.
+c. Escriba un programa principal que instancie un proyecto con un director y dos
+investigadores. Asigne dos subsidios a cada investigador y otorgue los
+subsidios del primero de ellos, luego imprima todos los datos del toString
+pedido.
